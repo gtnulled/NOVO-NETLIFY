@@ -26,7 +26,7 @@ export default function Home() {
     const { data, error } = await supabase
       .from("users")
       .select("id, nome_completo, grau_ordem, diocese")
-      .or(`nome_completo.ilike.%${searchTerm}%, diocese.ilike.%${searchTerm}%`)
+      .or(`nome_completo.ilike.%${searchTerm}%, diocese.ilike.%${searchTerm}%, grau_ordem.ilike.%${searchTerm}%`)
       .eq("verificado", true)
       .limit(5)
 
@@ -70,4 +70,3 @@ export default function Home() {
     </Layout>
   )
 }
-
