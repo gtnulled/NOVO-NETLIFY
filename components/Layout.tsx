@@ -2,6 +2,7 @@ import type React from "react"
 import Link from "next/link"
 import { useRouter } from "next/router"
 import { useUser } from "../utils/useUser"
+import Logo from "./Logo"
 
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const router = useRouter()
@@ -11,8 +12,9 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     <div className="min-h-screen flex flex-col bg-beige-100">
       <header className="bg-burgundy-900 text-white p-4">
         <div className="container mx-auto flex justify-between items-center">
-          <Link href="/" className="text-2xl font-serif">
-            Cadastro Regional de Presbíteros
+          <Link href="/" className="flex items-center space-x-4 text-2xl font-serif">
+            <Logo />
+            <span className="hidden md:inline">Cadastro Regional de Presbíteros</span>
           </Link>
           <nav>
             {user ? (
@@ -70,4 +72,3 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 }
 
 export default Layout
-
