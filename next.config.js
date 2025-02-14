@@ -8,7 +8,9 @@ const nextConfig = {
     config.resolve.fallback = { fs: false, path: false }
     return config
   },
+  target: "serverless",
 }
 
 module.exports = nextConfig
+
 
