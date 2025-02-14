@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ["localhost", "your-supabase-project.supabase.co"],
+    domains: ["localhost", "https://fhutkachtosudtzqjzau.supabase.co"],
   },
   webpack: (config) => {
     config.resolve.fallback = { fs: false, path: false }
@@ -11,4 +11,3 @@ const nextConfig = {
 }
 
 module.exports = nextConfig
-
